@@ -10,11 +10,11 @@ O passo-a-passo abaixo foi feito com base no Eclipse.
 - Para alterar as configurações do banco de dados com URL, usuário, senha e url do console, e ativar/desativar o console, abra o arquivo application.properties. As propriedades do datasource são exibidas como abaixo:
 
     # BD
-    spring.datasource.url=jdbc:h2:mem:testdb
-	spring.datasource.driverClassName=org.h2.Driver
-	spring.datasource.username=sa
-	spring.datasource.password=
-	spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+        spring.datasource.url=jdbc:h2:mem:testdb <br />
+	spring.datasource.driverClassName=org.h2.Driver <br />
+	spring.datasource.username=sa <br />
+	spring.datasource.password= <br />
+	spring.jpa.database-platform=org.hibernate.dialect.H2Dialect <br />
 	
 	Acesso ao banco de dados:
 	http://localhost:8080/h2-console/login.jsp 
