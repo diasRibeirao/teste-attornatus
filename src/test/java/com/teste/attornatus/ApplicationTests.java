@@ -1,13 +1,13 @@
 package com.teste.attornatus;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.junit.platform.suite.api.SelectClasses;
+import org.junit.platform.suite.api.Suite;
 
-@SpringBootTest
-class ApplicationTests {
-
-	@Test
-	void contextLoads() {
-	}
+@Suite
+@SelectClasses({ 
+	PessoaControllerIntegrationTest.class, 
+	EnderecoControllerIntegrationTest.class 
+})
+public class ApplicationTests {
 
 }

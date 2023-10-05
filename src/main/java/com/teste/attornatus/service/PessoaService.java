@@ -11,6 +11,7 @@ import com.teste.attornatus.repository.PessoaRepository;
 import com.teste.attornatus.service.exceptions.ObjectNotFoundException;
 
 import jakarta.transaction.Transactional;
+import jakarta.validation.Valid;
 
 @Service
 public class PessoaService {
@@ -33,9 +34,13 @@ public class PessoaService {
     }
 	
 	@Transactional
-    public Pessoa alterar(Pessoa pessoa) {
+    public Pessoa atualizar(Pessoa pessoa) {
 		buscarPeloId(pessoa.getId());
         return pessoaRepository.save(pessoa);
     }
+
+	public void deletar(@Valid Long id) {
+		pessoaRepository.deleteById(id);
+	}
 	
 }
